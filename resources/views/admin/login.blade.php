@@ -29,6 +29,10 @@
                                     @if (session()->get('error'))
                                         <div class="alert alert-danger">{{ session()->get('error') }}</div>
                                     @endif
+                                    @if (session()->get('success'))
+                                        <div class="alert alert-success">{{ session()->get('success') }}
+                                        </div>
+                                    @endif
                                     <h4 class="text-center">Admin Panel Login</h4>
 
                                 </div>
