@@ -19,3 +19,5 @@ Route::post('/admin/login-submit', [AdminloginController::class, 'login_submit']
 Route::get('/admin/forget-password', [AdminloginController::class, 'forget_password'])->name('admin_forget_password');
 Route::get('/admin/logout', [AdminloginController::class, 'logout'])->name('admin_logout');
 Route::post('/admin/forget-password-submit', [AdminloginController::class, 'forget_password_submit'])->name('admin_forget_password_submit');
+Route::get('/admin/reset-password/{token}/{email}', [AdminloginController::class, 'reset_password'])->name('admin_reset_password');
+Route::post('/admin/reset-password-submit', [AdminloginController::class, 'reset_password_submit'])->name('admin_reset_password_submit');
