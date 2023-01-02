@@ -27,6 +27,10 @@
                 </ul>
             </li>
 
+            <li class=""><a class="nav-link" href="{{ route('admin_slide_view') }}"><i
+                        class="fas fa-hand-point-right"></i>
+                    <span>Slider</span></a></li>
+
             <li class=""><a class="nav-link" href="setting.html"><i class="fas fa-hand-point-right"></i>
                     <span>Setting</span></a></li>
 

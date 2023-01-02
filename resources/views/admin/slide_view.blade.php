@@ -1,6 +1,12 @@
 @extends('admin.layout.app')
 
-@section('heading', 'Slider View')
+@section('heading', 'View Slides')
+
+@section('right_top_button')
+    <div class="ml-auto">
+        <a href="{{ route('admin_slide_add') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Add Slide</a>
+    </div>
+@endsection
 
 @section('main_content')
     <div class="section-body">
@@ -20,13 +26,13 @@
                                 <tbody>
                                     @foreach ($slides as $row)
                                         <tr>
-                                            <td>1</td>
+                                            <td style="width:1%">1</td>
                                             <td>
                                                 <img src="{{ asset('uploads/' . $row->photo) }}" alt=""
                                                     class="w_200">
                                             </td>
 
-                                            <td class="pt_10 pb_10">
+                                            <td class="pt_10 pb_10" style="width:20%">
 
                                                 <a href="" class="btn btn-primary">Edit</a>
                                                 <a href="" class="btn btn-danger"
