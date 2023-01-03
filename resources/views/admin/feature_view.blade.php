@@ -29,7 +29,7 @@
                                         <tr>
                                             <td style="width:1%">{{ $loop->iteration }}</td>
                                             <td>
-                                                <i class="{{ $row->icon }}"></i>
+                                                <i class="{{ $row->icon }} fz_40"></i>
                                             </td>
                                             <td>
                                                 {{ $row->heading }}
@@ -39,7 +39,8 @@
 
                                                 <a href="{{ route('admin_feature_edit', $row->id) }}"
                                                     class="btn btn-primary">Edit</a>
-                                                <a href="{{ route('admin_feature_delete', $row->id) }}" class="btn btn-danger"
+                                                <a href="{{ route('admin_feature_delete', $row->id) }}"
+                                                    class="btn btn-danger"
                                                     onClick="return confirm('Are you sure?');">Delete</a>
                                             </td>
 
