@@ -38,4 +38,40 @@ class AdminSlideController extends Controller
 
              return redirect()->back()->with('success', 'Slide is added successfully!');
     }
+
+    public function edit($id){
+        $slide_data = Slide::where('id', $id)->first();
+       
+        return view('admin.slide_edit', compact('slide_data'));
+    }
+
+    public function update(Request $request, $id){
+
+        $obj = Slide::where('id', $id)->first();
+
+        if($request->hasFile('photo')){
+
+            $request->validate([
+                'photo' => 'image|mimes: jpg,jpeg,png,gif,svg'
+             
+            ]);
+
+            unlink(public_path('uploads/'.$obj->photo));
+            $ext = $request->file('photo')->extension();
+             $final_name  = time() . '.' . $ext;
+ 
+             $request->file('photo')->move(public_path('uploads/'), $final_name);
+            
+            $obj->photo = $final_name;
+           
+        }
+
+        $obj->heading = $request->heading;
+        $obj->text = $request->text;
+        $obj->button_text = $request->button_text;
+        $obj->button_url = $request->button_url;
+        $obj->update();
+       
+        return redirect()->back()->with('success', 'Slide is updated successfully!');
+    }
 }

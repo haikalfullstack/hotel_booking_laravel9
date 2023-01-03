@@ -26,7 +26,7 @@
                                 <tbody>
                                     @foreach ($slides as $row)
                                         <tr>
-                                            <td style="width:1%">1</td>
+                                            <td style="width:1%">{{ $loop->iteration }}</td>
                                             <td>
                                                 <img src="{{ asset('uploads/' . $row->photo) }}" alt=""
                                                     class="w_200">
@@ -34,7 +34,8 @@
 
                                             <td class="pt_10 pb_10" style="width:20%">
 
-                                                <a href="" class="btn btn-primary">Edit</a>
+                                                <a href="{{ route('admin_slide_edit', $row->id) }}"
+                                                    class="btn btn-primary">Edit</a>
                                                 <a href="" class="btn btn-danger"
                                                     onClick="return confirm('Are you sure?');">Delete</a>
                                             </td>
@@ -50,3 +51,4 @@
         </div>
     </div>
 @endsection
+~
