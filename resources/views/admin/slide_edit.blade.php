@@ -14,7 +14,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('admin_slide_update', $slide_data->id) }}" method="post" enctype="multipart/form-data">@csrf
+                        <form action="{{ route('admin_slide_update', $slide_data->id) }}" method="post"
+                            enctype="multipart/form-data">@csrf
                             <div class="row">
 
                                 <div class="col-md-12">
@@ -40,8 +41,8 @@
                                     </div>
                                     <div class="mb-4">
                                         <label class="form-label">Text</label>
-                                        <input type="text" class="form-control" name="text"
-                                            value="{{ $slide_data->text }}">
+                                        <textarea name="text" id="" cols="30" rows="10" class="form-control h_100">{{ $slide_data->text }}</textarea>
+
                                     </div>
                                     <div class="mb-4">
                                         <label class="form-label">Button Text</label>

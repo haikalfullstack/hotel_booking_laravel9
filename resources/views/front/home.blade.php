@@ -3,32 +3,24 @@
 @section('main_content')
     <div class="slider">
         <div class="slide-carousel owl-carousel">
-            <div class="item" style="background-image:url(uploads/slide1.jpg);">
-                <div class="bg"></div>
-                <div class="text">
-                    <h2>Best Hotel in the City</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate, veritatis
-                        esse dolorem soluta.
-                    </p>
-                    <div class="button">
-                        <a href="">Read More</a>
+            @foreach ($slide_all as $item)
+                <div class="item" style="background-image:url({{ asset('uploads/' . $item->photo) }});">
+                    <div class="bg"></div>
+                    <div class="text">
+                        <h2>{{ $item->heading }}</h2>
+                        <p>
+                            {!! $item->text !!}
+                        </p>
+                        @if ($item->button_text != '')
+                            <div class="button">
+                                <a href="{{ $item->button_url }}">{{ $item->button_text }}</a>
+                            </div>
+                        @endif
                     </div>
                 </div>
-            </div>
-            <div class="item" style="background-image:url(uploads/slide2.jpg);">
-                <div class="bg"></div>
-                <div class="text">
-                    <h2>Quality rooms for the guests</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt libero voluptate, veritatis
-                        esse dolorem soluta.
-                    </p>
-                    <div class="button">
-                        <a href="">Read More</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
+
         </div>
     </div>
 
@@ -88,8 +80,8 @@
                         <div class="text">
                             <h2>24 hour Room service</h2>
                             <p>
-                                If you find a lower online rate, we will match it and give you an additional 25% off on
-                                your stay.
+                                If you find a lower online rate, we will match it and give you an additional 25% off on your
+                                stay.
                             </p>
                         </div>
                     </div>
@@ -100,8 +92,8 @@
                         <div class="text">
                             <h2>Free Wifi</h2>
                             <p>
-                                If you find a lower online rate, we will match it and give you an additional 25% off on
-                                your stay.
+                                If you find a lower online rate, we will match it and give you an additional 25% off on your
+                                stay.
                             </p>
                         </div>
                     </div>
@@ -112,8 +104,8 @@
                         <div class="text">
                             <h2>Enjoy Free Nights</h2>
                             <p>
-                                If you find a lower online rate, we will match it and give you an additional 25% off on
-                                your stay.
+                                If you find a lower online rate, we will match it and give you an additional 25% off on your
+                                stay.
                             </p>
                         </div>
                     </div>
@@ -124,8 +116,7 @@
                         <div class="text">
                             <h2>Save up to 40%</h2>
                             <p>
-                                Members get access to an exclusive discounts on Radissonblu.com. Not a member yet? Hurry
-                                Up!
+                                Members get access to an exclusive discounts on Radissonblu.com. Not a member yet? Hurry Up!
                             </p>
                         </div>
                     </div>
@@ -136,8 +127,8 @@
                         <div class="text">
                             <h2>Complimentary Breakfast</h2>
                             <p>
-                                If you find a lower online rate, we will match it and give you an additional 25% off on
-                                your stay.
+                                If you find a lower online rate, we will match it and give you an additional 25% off on your
+                                stay.
                             </p>
                         </div>
                     </div>
@@ -148,8 +139,8 @@
                         <div class="text">
                             <h2>Swimming Pool</h2>
                             <p>
-                                If you find a lower online rate, we will match it and give you an additional 25% off on
-                                your stay.
+                                If you find a lower online rate, we will match it and give you an additional 25% off on your
+                                stay.
                             </p>
                         </div>
                     </div>
@@ -160,8 +151,8 @@
                         <div class="text">
                             <h2>Gym and Fitness</h2>
                             <p>
-                                If you find a lower online rate, we will match it and give you an additional 25% off on
-                                your stay.
+                                If you find a lower online rate, we will match it and give you an additional 25% off on your
+                                stay.
                             </p>
                         </div>
                     </div>
@@ -172,8 +163,7 @@
                         <div class="text">
                             <h2>Top Class Restaurant</h2>
                             <p>
-                                Members get access to an exclusive discounts on Radissonblu.com. Not a member yet? Hurry
-                                Up!
+                                Members get access to an exclusive discounts on Radissonblu.com. Not a member yet? Hurry Up!
                             </p>
                         </div>
                     </div>
@@ -356,8 +346,7 @@
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum
                                     has. Latine propriae quo no, unum ridens. Lorem ipsum dolor sit amet, an labores
-                                    explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum
-                                    ridens.
+                                    explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens.
                                 </p>
                             </div>
                         </div>
@@ -373,8 +362,7 @@
                                 <p>
                                     Lorem ipsum dolor sit amet, an labores explicari qui, eu nostrum copiosae argumentum
                                     has. Latine propriae quo no, unum ridens. Lorem ipsum dolor sit amet, an labores
-                                    explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum
-                                    ridens.
+                                    explicari qui, eu nostrum copiosae argumentum has. Latine propriae quo no, unum ridens.
                                 </p>
                             </div>
                         </div>
@@ -405,8 +393,8 @@
                             <div class="short-des">
                                 <p>
                                     If you want to get some good contents from the people of your country then just
-                                    contribute into the main community of your people and I am sure you will be
-                                    benfitted from that.
+                                    contribute into the main community of your people and I am sure you will be benfitted
+                                    from that.
                                 </p>
                             </div>
                             <div class="button">
@@ -425,8 +413,8 @@
                             <div class="short-des">
                                 <p>
                                     If you want to get some good contents from the people of your country then just
-                                    contribute into the main community of your people and I am sure you will be
-                                    benfitted from that.
+                                    contribute into the main community of your people and I am sure you will be benfitted
+                                    from that.
                                 </p>
                             </div>
                             <div class="button">
@@ -445,8 +433,8 @@
                             <div class="short-des">
                                 <p>
                                     If you want to get some good contents from the people of your country then just
-                                    contribute into the main community of your people and I am sure you will be
-                                    benfitted from that.
+                                    contribute into the main community of your people and I am sure you will be benfitted
+                                    from that.
                                 </p>
                             </div>
                             <div class="button">

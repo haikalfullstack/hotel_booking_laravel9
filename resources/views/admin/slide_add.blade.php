@@ -32,8 +32,8 @@
                                     </div>
                                     <div class="mb-4">
                                         <label class="form-label">Text</label>
-                                        <input type="text" class="form-control" name="text"
-                                            value="{{ old('text') }}">
+                                        <textarea name="text" id="" cols="30" rows="10" class="form-control h_100">{{ old('text') }}</textarea>
+
                                     </div>
                                     <div class="mb-4">
                                         <label class="form-label">Button Text</label>
