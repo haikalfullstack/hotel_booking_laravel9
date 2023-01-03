@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="mb-4">
                                         <label class="form-label">Button Text</label>
-                                        <input type="password" class="form-control" name="button_text"
+                                        <input type="text" class="form-control" name="button_text"
                                             value="{{ old('button_text') }}">
                                     </div>
                                     <div class="mb-4">

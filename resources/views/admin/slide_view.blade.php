@@ -36,7 +36,7 @@
 
                                                 <a href="{{ route('admin_slide_edit', $row->id) }}"
                                                     class="btn btn-primary">Edit</a>
-                                                <a href="" class="btn btn-danger"
+                                                <a href="{{ route('admin_slide_delete', $row->id) }}" class="btn btn-danger"
                                                     onClick="return confirm('Are you sure?');">Delete</a>
                                             </td>
 

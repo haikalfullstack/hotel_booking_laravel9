@@ -32,6 +32,7 @@ class AdminSlideController extends Controller
              $obj = new Slide();
              $obj->photo = $final_name;
              $obj->heading = $request->heading;
+             $obj->text = $request->text;
              $obj->button_text = $request->button_text;
              $obj->button_url = $request->button_url;
              $obj->save();
@@ -73,5 +74,14 @@ class AdminSlideController extends Controller
         $obj->update();
        
         return redirect()->back()->with('success', 'Slide is updated successfully!');
+    }
+
+    public function delete($id){
+        $single_data = Slide::where('id', $id)->first();
+        unlink(public_path('uploads/'.$single_data->photo));
+        $single_data->delete();
+
+        return redirect()->back()->with('success', 'Slide is deleted successfully!');
+        
     }
 }
