@@ -4,7 +4,7 @@
 
 @section('right_top_button')
     <div class="ml-auto">
-        <a href="{{ route('admin_slide_add') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Add Slide</a>
+        <a href="{{ route('admin_slide_add') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add Slide</a>
     </div>
 @endsection
 
