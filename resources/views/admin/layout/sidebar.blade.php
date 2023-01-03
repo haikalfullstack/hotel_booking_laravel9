@@ -30,18 +30,10 @@
             <li class=""><a class="nav-link" href="{{ route('admin_slide_view') }}"><i
                         class="fa fa-hand-o-right"></i>
                     <span>Slider</span></a></li>
+            <li class=""><a class="nav-link" href="{{ route('admin_feature_view') }}"><i
+                        class="fa fa-hand-o-right"></i>
+                    <span>Feature</span></a></li>
 
-            <li class=""><a class="nav-link" href="setting.html"><i class="fa fa-hand-o-right"></i>
-                    <span>Setting</span></a></li>
-
-            <li class=""><a class="nav-link" href="form.html"><i class="fa fa-hand-o-right"></i>
-                    <span>Form</span></a></li>
-
-            <li class=""><a class="nav-link" href="table.html"><i class="fa fa-hand-o-right"></i>
-                    <span>Table</span></a></li>
-
-            <li class=""><a class="nav-link" href="invoice.html"><i class="fa fa-hand-o-right"></i>
-                    <span>Invoice</span></a></li>
 
         </ul>
     </aside>
