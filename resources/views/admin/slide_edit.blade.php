@@ -1,10 +1,10 @@
 @extends('admin.layout.app')
 
-@section('heading', 'Add Slide')
+@section('heading', 'Edit Slide')
 
 @section('right_top_button')
     <div class="ml-auto">
-        <a href="{{ route('admin_slide_view') }}" class="btn btn-primary"><i class="fa fa-plus"></i> View Slides</a>
+        <a href="{{ route('admin_slide_view') }}" class="btn btn-primary"><i class="fa fa-plus"></i> View All</a>
     </div>
 @endsection
 
@@ -20,7 +20,7 @@
 
                                 <div class="col-md-12">
                                     <div class="mb-4">
-                                        <label class="form-label">Existing Photo *</label>
+                                        <label class="form-label">Existing Photo </label>
                                         <div>
                                             <img src="{{ asset('uploads/' . $slide_data->photo) }}" class="w_200">
 
@@ -28,7 +28,7 @@
 
                                     </div>
                                     <div class="mb-4">
-                                        <label class="form-label">Change Photo *</label>
+                                        <label class="form-label">Change Photo </label>
                                         <div>
                                             <input type="file" name="photo">
                                         </div>
